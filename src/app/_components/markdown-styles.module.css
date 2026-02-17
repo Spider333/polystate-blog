@@ -1,3 +1,7 @@
+/* ═══════════════════════════════════════════
+   BASE TYPOGRAPHY
+   ═══════════════════════════════════════════ */
+
 .markdown {
   @apply text-lg leading-relaxed;
   color: #333;
@@ -11,12 +15,12 @@
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug font-bold;
+  @apply text-3xl mt-14 mb-5 leading-snug font-bold;
   color: #030B21;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug font-semibold;
+  @apply text-2xl mt-10 mb-4 leading-snug font-semibold;
   color: #030B21;
 }
 
@@ -25,11 +29,9 @@
   @apply underline decoration-polystate-light-blue underline-offset-2 hover:decoration-polystate-blue transition-colors;
 }
 
-.markdown blockquote {
-  @apply border-l-4 pl-6 italic my-8 py-2;
-  border-color: #0E36A5;
-  background: #CADDFF20;
-  color: #555;
+.markdown strong {
+  @apply font-bold;
+  color: #030B21;
 }
 
 .markdown ul {
@@ -44,8 +46,41 @@
   @apply mb-2;
 }
 
+.markdown hr {
+  @apply my-14 border-none h-px;
+  background: linear-gradient(to right, transparent, #CADDFF, #0E36A5, #CADDFF, transparent);
+}
+
+.markdown img {
+  @apply rounded-xl my-8 w-full;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.markdown img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 12px 40px rgba(14, 54, 165, 0.12);
+}
+
+/* ═══════════════════════════════════════════
+   BLOCKQUOTES
+   ═══════════════════════════════════════════ */
+
+.markdown blockquote {
+  @apply border-l-4 pl-6 italic my-8 py-3;
+  border-color: #0E36A5;
+  background: linear-gradient(135deg, #CADDFF15, #CADDFF30);
+  border-radius: 0 12px 12px 0;
+  color: #444;
+}
+
+/* ═══════════════════════════════════════════
+   TABLES
+   ═══════════════════════════════════════════ */
+
 .markdown table {
-  @apply w-full border-collapse my-8 rounded-lg overflow-hidden;
+  @apply w-full border-collapse my-8 overflow-hidden;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .markdown thead {
@@ -62,8 +97,12 @@
 }
 
 .markdown tbody tr:hover {
-  background: #CADDFF20;
+  background: #CADDFF15;
 }
+
+/* ═══════════════════════════════════════════
+   CODE
+   ═══════════════════════════════════════════ */
 
 .markdown code {
   @apply px-1.5 py-0.5 rounded text-sm font-mono;
@@ -82,16 +121,216 @@
   color: #CADDFF;
 }
 
-.markdown strong {
-  @apply font-bold;
+/* ═══════════════════════════════════════════
+   FIGURES & CAPTIONS
+   ═══════════════════════════════════════════ */
+
+.markdown figure {
+  @apply my-10 mx-0;
+}
+
+.markdown figure img {
+  @apply rounded-xl w-full shadow-md;
+}
+
+.markdown figcaption {
+  @apply text-sm text-center mt-3 italic;
+  color: #6B7280;
+}
+
+/* ═══════════════════════════════════════════
+   CALLOUT BOX
+   ═══════════════════════════════════════════ */
+
+.markdown :global(.callout) {
+  @apply my-8 p-6 rounded-xl border-l-4;
+  border-color: #0E36A5;
+  background: linear-gradient(135deg, #CADDFF18, #D8F2DC18);
+  box-shadow: 0 2px 8px rgba(14, 54, 165, 0.06);
+}
+
+.markdown :global(.callout) strong {
+  color: #0E36A5;
+  @apply text-sm uppercase tracking-wider block mb-2;
+}
+
+.markdown :global(.callout) p {
+  @apply my-0;
+  color: #333;
+}
+
+.markdown :global(.callout-warning) {
+  @apply my-8 p-6 rounded-xl border-l-4;
+  border-color: #f59e0b;
+  background: linear-gradient(135deg, #fef3c718, #fef9c318);
+}
+
+.markdown :global(.callout-warning) strong {
+  color: #d97706;
+  @apply text-sm uppercase tracking-wider block mb-2;
+}
+
+/* ═══════════════════════════════════════════
+   STAT BANNER
+   ═══════════════════════════════════════════ */
+
+.markdown :global(.stat-banner) {
+  @apply my-10 py-8 px-6 flex flex-wrap justify-center gap-8 rounded-2xl text-center;
+  background: linear-gradient(135deg, #030B21, #0E36A5);
+  box-shadow: 0 8px 30px rgba(3, 11, 33, 0.2);
+}
+
+.markdown :global(.stat) {
+  @apply flex flex-col items-center min-w-[120px];
+}
+
+.markdown :global(.stat-number) {
+  @apply text-4xl md:text-5xl font-bold block;
+  color: #D8F2DC;
+}
+
+.markdown :global(.stat-label) {
+  @apply text-xs uppercase tracking-wider mt-2 block;
+  color: #CADDFF;
+}
+
+/* ═══════════════════════════════════════════
+   PULL QUOTE
+   ═══════════════════════════════════════════ */
+
+.markdown :global(.pull-quote) {
+  @apply my-12 py-8 px-8 text-center text-2xl md:text-3xl font-light italic border-none rounded-none;
+  color: #0E36A5;
+  background: none;
+  border-top: 2px solid #CADDFF;
+  border-bottom: 2px solid #CADDFF;
+  line-height: 1.5;
+}
+
+/* ═══════════════════════════════════════════
+   COMPARE CARDS
+   ═══════════════════════════════════════════ */
+
+.markdown :global(.compare-grid) {
+  @apply my-10 grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.markdown :global(.compare-card) {
+  @apply p-6 rounded-xl border;
+  border-color: #EAEAEA;
+  background: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.markdown :global(.compare-card):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(14, 54, 165, 0.08);
+}
+
+.markdown :global(.compare-card) h4 {
+  @apply text-lg font-bold mb-2;
   color: #030B21;
 }
 
-.markdown hr {
-  @apply my-12;
-  border-color: #EAEAEA;
+.markdown :global(.compare-card) p {
+  @apply my-0 text-sm;
+  color: #6B7280;
 }
 
-.markdown img {
-  @apply rounded-xl my-8;
+.markdown :global(.compare-card.accent) {
+  border-color: #0E36A5;
+  background: linear-gradient(135deg, #CADDFF10, #CADDFF20);
+}
+
+.markdown :global(.compare-card.accent) h4 {
+  color: #0E36A5;
+}
+
+/* ═══════════════════════════════════════════
+   TIMELINE
+   ═══════════════════════════════════════════ */
+
+.markdown :global(.timeline) {
+  @apply my-10 pl-8 relative;
+}
+
+.markdown :global(.timeline)::before {
+  content: '';
+  @apply absolute left-3 top-0 bottom-0 w-0.5;
+  background: linear-gradient(to bottom, #0E36A5, #CADDFF);
+}
+
+.markdown :global(.timeline-item) {
+  @apply relative mb-8 pl-6;
+}
+
+.markdown :global(.timeline-item)::before {
+  content: '';
+  @apply absolute w-3 h-3 rounded-full;
+  left: -18px;
+  top: 6px;
+  background: #0E36A5;
+  box-shadow: 0 0 0 4px #CADDFF;
+}
+
+.markdown :global(.timeline-date) {
+  @apply text-xs font-bold uppercase tracking-wider block mb-1;
+  color: #0E36A5;
+}
+
+.markdown :global(.timeline-content) {
+  @apply text-sm;
+  color: #555;
+}
+
+.markdown :global(.timeline-content) strong {
+  color: #030B21;
+}
+
+/* ═══════════════════════════════════════════
+   TOPIC TAGS
+   ═══════════════════════════════════════════ */
+
+.markdown :global(.topic-tags) {
+  @apply flex flex-wrap gap-2 my-6;
+}
+
+.markdown :global(.tag) {
+  @apply text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full;
+  background: #CADDFF30;
+  color: #0E36A5;
+}
+
+.markdown :global(.tag.green) {
+  background: #D8F2DC50;
+  color: #166534;
+}
+
+/* ═══════════════════════════════════════════
+   SECTION DIVIDER
+   ═══════════════════════════════════════════ */
+
+.markdown :global(.section-divider) {
+  @apply my-16 h-1 rounded-full border-none;
+  background: linear-gradient(to right, #0E36A5, #CADDFF, #D8F2DC);
+}
+
+/* ═══════════════════════════════════════════
+   HIGHLIGHT BOX
+   ═══════════════════════════════════════════ */
+
+.markdown :global(.highlight-box) {
+  @apply my-10 p-8 rounded-2xl;
+  background: linear-gradient(135deg, #CADDFF20, #D8F2DC20);
+  border: 1px solid #CADDFF50;
+}
+
+.markdown :global(.highlight-box) h3,
+.markdown :global(.highlight-box) h4 {
+  @apply mt-0 mb-4;
+  color: #030B21;
+}
+
+.markdown :global(.highlight-box) p {
+  @apply my-2;
 }
