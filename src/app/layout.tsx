@@ -1,12 +1,37 @@
 import Footer from "@/app/_components/footer";
 import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import cn from "classnames";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const generalSans = localFont({
+  src: [
+    {
+      path: "../fonts/GeneralSans-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/GeneralSans-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/GeneralSans-Semibold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../fonts/GeneralSans-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-general-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Polystate Blog",
@@ -58,7 +83,7 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body
-        className={cn(inter.className, "bg-white text-polystate-text")}
+        className={cn(generalSans.variable, "font-sans bg-white text-polystate-text")}
       >
         <div className="min-h-screen">{children}</div>
         <Footer />

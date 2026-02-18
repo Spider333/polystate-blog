@@ -30,7 +30,7 @@ export function PostPreview({
         <div className="text-sm mb-3 text-polystate-text-secondary font-medium">
           <DateFormatter dateString={date} />
         </div>
-        <h3 className="text-2xl mb-3 leading-snug font-bold text-polystate-dark">
+        <h3 className="text-2xl mb-3 leading-[1.4] font-medium text-polystate-dark">
           <Link
             href={`/posts/${slug}`}
             className="hover:text-polystate-blue transition-colors"

@@ -13,7 +13,7 @@ const Header = () => {
             height={28}
             className="w-7 h-7"
           />
-          <span className="text-xl font-bold tracking-tight text-polystate-dark">
+          <span className="text-xl font-medium tracking-tight text-polystate-dark">
             Polystate
           </span>
         </Link>

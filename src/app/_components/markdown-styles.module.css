@@ -4,7 +4,7 @@
 
 .markdown {
   @apply text-lg leading-relaxed;
-  color: #333;
+  color: #2E364D;
 }
 
 .markdown p,
@@ -15,12 +15,12 @@
 }
 
 .markdown h2 {
-  @apply text-3xl mt-14 mb-5 leading-snug font-bold;
+  @apply text-3xl mt-14 mb-5 leading-[1.4] font-medium;
   color: #030B21;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-10 mb-4 leading-snug font-semibold;
+  @apply text-2xl mt-10 mb-4 leading-[1.4] font-medium;
   color: #030B21;
 }
 
@@ -70,7 +70,7 @@
   border-color: #0E36A5;
   background: linear-gradient(135deg, #CADDFF15, #CADDFF30);
   border-radius: 0 12px 12px 0;
-  color: #444;
+  color: #2E364D;
 }
 
 /* ═══════════════════════════════════════════
@@ -135,7 +135,7 @@
 
 .markdown figcaption {
   @apply text-sm text-center mt-3 italic;
-  color: #6B7280;
+  color: #78788C;
 }
 
 /* ═══════════════════════════════════════════
@@ -156,7 +156,7 @@
 
 .markdown :global(.callout) p {
   @apply my-0;
-  color: #333;
+  color: #2E364D;
 }
 
 .markdown :global(.callout-warning) {
@@ -234,7 +234,7 @@
 
 .markdown :global(.compare-card) p {
   @apply my-0 text-sm;
-  color: #6B7280;
+  color: #78788C;
 }
 
 .markdown :global(.compare-card.accent) {
@@ -280,7 +280,7 @@
 
 .markdown :global(.timeline-content) {
   @apply text-sm;
-  color: #555;
+  color: #78788C;
 }
 
 .markdown :global(.timeline-content) strong {

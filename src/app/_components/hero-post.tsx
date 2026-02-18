@@ -31,7 +31,7 @@ export function HeroPost({
           <span className="inline-block text-xs font-semibold uppercase tracking-wider text-polystate-blue bg-polystate-light-blue/30 px-3 py-1 rounded-full mb-4">
             Featured
           </span>
-          <h3 className="mb-4 text-4xl lg:text-5xl leading-tight font-bold text-polystate-dark">
+          <h3 className="mb-4 text-4xl lg:text-5xl leading-[1.4] font-medium text-polystate-dark">
             <Link
               href={`/posts/${slug}`}
               className="hover:text-polystate-blue transition-colors"

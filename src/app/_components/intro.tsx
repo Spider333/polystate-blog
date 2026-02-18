@@ -11,7 +11,7 @@ export function Intro() {
           height={48}
           className="w-12 h-12"
         />
-        <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight text-polystate-dark">
+        <h1 className="text-5xl md:text-8xl font-normal tracking-tighter leading-[1.4] text-polystate-dark">
           Polystate
         </h1>
       </div>

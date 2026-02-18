@@ -4,7 +4,7 @@ export function Footer() {
       <div className="container mx-auto px-5">
         <div className="py-16 flex flex-col md:flex-row items-center justify-between">
           <div className="mb-6 md:mb-0">
-            <h3 className="text-2xl font-bold tracking-tight text-white">
+            <h3 className="text-2xl font-medium tracking-tight text-white">
               Polystate
             </h3>
             <p className="text-blue-200 mt-1 text-sm">

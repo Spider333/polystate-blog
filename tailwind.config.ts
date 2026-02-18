@@ -8,6 +8,10 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["var(--font-general-sans)", "General Sans", "system-ui", "sans-serif"],
+      mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -28,7 +32,8 @@ const config: Config = {
         "polystate-light": "#F5F5F7",
         "polystate-section": "#F9F9F9",
         "polystate-text": "#030B21",
-        "polystate-text-secondary": "#6B7280",
+        "polystate-text-secondary": "#78788C",
+        "polystate-dark-gray": "#2E364D",
         "polystate-border": "#EAEAEA",
       },
       spacing: {
